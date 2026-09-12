@@ -302,7 +302,7 @@ class Klein9RefModFolderLoader:
     def INPUT_TYPES(cls):
         return {
             "required": {
-                "folder_path": ("STRING", {"default": "C:/Development/ai-toolkit/datasets/aneta"}),
+                "folder_path": ("STRING", {"default": "C:/Development/ai-toolkit/datasets/billieeilish"}),
                 "max_images": ("INT", {"default": 16, "min": 1, "max": 128, "step": 1}),
                 "max_edge": ("INT", {"default": 1024, "min": 256, "max": 2048, "step": 64}),
             }

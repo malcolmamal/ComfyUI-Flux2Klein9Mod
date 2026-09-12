@@ -5,8 +5,8 @@ extract_klein9_mod.py — CLI tool to extract FLUX.2 / Klein9 RefMod (.safetenso
 Usage:
   python extract_klein9_mod.py \
     --vae path/to/flux2_vae.safetensors \
-    --name fk9_aneta_v1_refmod \
-    --dataset-dir C:/Development/ai-toolkit/datasets/aneta \
+    --name fk9_billieeilish_v1_refmod \
+    --dataset-dir C:/Development/ai-toolkit/datasets/billieeilish \
     --concept-type identity \
     --token-budget 1024 \
     --output-dir C:/Development/ComfyUI/models/refmods-klein9/
@@ -46,7 +46,7 @@ from common import load_image_file, list_media_files, refmods_klein9_dir
 def main():
     parser = argparse.ArgumentParser(description="Extract FLUX.2 / Klein9 RefMod reference adapter from images")
     parser.add_argument("--vae", type=str, default=None, help="Path to FLUX.2 / Klein VAE .safetensors file")
-    parser.add_argument("--name", type=str, required=True, help="RefMod output name (e.g. fk9_aneta_v1_refmod)")
+    parser.add_argument("--name", type=str, required=True, help="RefMod output name (e.g. fk9_billieeilish_v1_refmod)")
     parser.add_argument("--dataset-dir", type=str, default=None, help="Directory containing reference images")
     parser.add_argument("--images", nargs="+", default=None, help="Explicit list of image paths")
     parser.add_argument("--concept-type", type=str, default="identity", choices=CONCEPT_TYPES, help="Mod concept type")

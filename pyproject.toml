@@ -23,10 +23,10 @@ license = "MIT"
 dependencies = ["torch>=2.0.0", "safetensors>=0.4.0", "Pillow>=9.0.0", "numpy"]
 
 [project.urls]
-Repository = "https://github.com/comfyanonymous/ComfyUI"
+Repository = "https://github.com/malcolmamal/ComfyUI-Flux2Klein9Mod"
 #  Used by Comfy Registry https://registry.comfy.org
-Documentation = "https://github.com/comfyanonymous/ComfyUI/wiki"
-"Bug Tracker" = "https://github.com/comfyanonymous/ComfyUI/issues"
+Documentation = "https://huggingface.co/datasets/malcolmrey/various/tree/main/klein9"
+"Bug Tracker" = "https://github.com/malcolmamal/ComfyUI-Flux2Klein9Mod/issues"
 
 [tool.comfy]
 PublisherId = "malcolmrey"

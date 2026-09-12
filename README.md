@@ -6,6 +6,13 @@ RefMods pre-encode reference images and datasets into compact, reusable `.safete
 
 ---
 
+## 🔗 Links & Resources
+
+- **More Info & Documentation:** [Hugging Face Dataset (klein9)](https://huggingface.co/datasets/malcolmrey/various/tree/main/klein9)
+- **RefMods Library Browser:** [RefMods Browser on Hugging Face Spaces](https://huggingface.co/spaces/malcolmrey/browser)
+
+---
+
 ## 📦 Features
 
 - **Pre-encoded Latent Storage:** Stored in `ComfyUI/models/refmods-klein9/`.
@@ -66,8 +73,8 @@ You can also pre-encode image datasets using the CLI:
 
 ```bash
 python custom_nodes/ComfyUI-Flux2Klein9Mod/extract_klein9_mod.py \
-  --name fk9_aneta_v1_refmod \
-  --dataset-dir C:/Development/ai-toolkit/datasets/aneta \
+  --name fk9_billieeilish_v1_refmod \
+  --dataset-dir C:/Development/ai-toolkit/datasets/billieeilish \
   --concept-type identity \
   --token-budget 1024 \
   --output-dir C:/Development/ComfyUI/models/refmods-klein9/
