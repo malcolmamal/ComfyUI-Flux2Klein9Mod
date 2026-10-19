@@ -257,9 +257,13 @@ class Klein9RefModExtract:
             clean_name = f"fk9_refmod_{int(time.time())}"
 
         # 1. VAE Encode
-        # images is [B, H, W, 3] in [0, 1]
-        latent_dict = vae.encode(images[:, :, :, :3])
-        samples = latent_dict["samples"] # [B, C, H, W]
+        encoded = vae.encode(images[:, :, :, :3])
+        if isinstance(encoded, dict):
+            samples = encoded["samples"]
+        elif isinstance(encoded, torch.Tensor):
+            samples = encoded
+        else:
+            raise TypeError(f"Unexpected VAE encode output: {type(encoded)}")
 
         # 2. Token Budget Compression / Pooling
         if mode == "pooled" or token_budget != "native":
